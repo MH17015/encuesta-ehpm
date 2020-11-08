@@ -43,6 +43,23 @@
       </table>
     </div>
     
+    <ol>
+    <li th:each="lista:${personas}" th:text="${lista.nombre}"></li>
+    </ol>
+    <br>
+    <ol >
+    <li th:each="lista:${personas}" th:text="${lista.apellido}"></li>
+    </ol>
+    <br>
+    <ol>
+    <li th:each="lista:${personas}" th:text="${lista.carrera}"></li>
+    </ol>
+    
+    
+    
+    
+    
+    
 
     <!-- Scripts js -->
     <!-- jQuery library -->
