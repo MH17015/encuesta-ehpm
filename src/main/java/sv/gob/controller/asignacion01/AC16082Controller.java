@@ -8,19 +8,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import sv.gob.models.PersonaEjemplo;
-import sv.gob.service.asignacion01.IMH17015Service;
+import sv.gob.service.asignacion01.IAC16082Service;
 
 @Controller
-public class MH17015Controller {
+public class AC16082Controller {
 
 	@Autowired
-	private IMH17015Service mh17015Service;
+	private IAC16082Service ac16082Service;
 	
-	@GetMapping("/mh17015")
+	@GetMapping("/ac16082")
 	private String MH17015(Model model)
 	{
-		List<PersonaEjemplo> lista = mh17015Service.mostrar();
+		List<PersonaEjemplo> lista = ac16082Service.mostrar();
 		model.addAttribute("personas",lista);
-		return "asignacion01/MH17015";
+		return "asignacion01/AC16082";
 	}
 }

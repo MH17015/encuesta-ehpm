@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import sv.gob.models.PersonaEjemplo;
 
 @Service
-public class MH17015Service implements IMH17015Service{
+public class AC16082Service implements IAC16082Service{
 	
 	private List<PersonaEjemplo> lista= null;
 	
-	public MH17015Service()
+	public AC16082Service()
 	{
 		lista = new LinkedList<>();
 		

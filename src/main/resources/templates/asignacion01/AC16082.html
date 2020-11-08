@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Asignación 01</title>
+</head>
+<body>
+	
+	<table border=1>
+		<thead>
+			<tr>
+				<td><center>Nombre</center></td>
+				<td><center>Apellido</center></td>
+				<td><center>Carrera</center></td>			
+			</tr>		
+		</thead>
+		<tbody>
+			<tr th:each= "lista:${personas}"> 
+				<td th:text=${lista.nombre}></td>
+				<td th:text=${lista.apellido}></td>	
+				<td th:text=${lista.carrera}></td>											 	
+			</tr>
+
+		</tbody>		
+	</table>
+	<ol>
+		<li th:each= "lista:${personas}" th:text="${lista.nombre}"> </li>		
+	</ol>
+	<ol>
+		<li th:each= "lista:${personas}" th:text="${lista.apellido}"> </li>		
+	</ol>
+		<ol>
+		<li th:each= "lista:${personas}" th:text="${lista.carrera}"> </li>		
+	</ol>
+	
+</body>
+</html>

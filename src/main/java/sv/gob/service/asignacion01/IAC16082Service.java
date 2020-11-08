@@ -4,7 +4,7 @@ import java.util.List;
 
 import sv.gob.models.PersonaEjemplo;
 
-public interface IMH17015Service {
+public interface IAC16082Service {
 	
 	List<PersonaEjemplo> mostrar();
 
