@@ -1,13 +1,7 @@
 package sv.gob.models;
 
 public class PersonaEjemplo {
- 
-	private String nombre;
-	private String apellido;
-	private String carrera;
-	
-	public String getNombre(){
-		return apellido;
+
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
@@ -16,7 +10,7 @@ public class PersonaEjemplo {
 		return apellido;
 	}
 	public void setApellido(String apellido) {
-		this.apellido=apellido;
+
 	}
 	public String getCarrera() {
 		return carrera;
@@ -26,6 +20,5 @@ public class PersonaEjemplo {
 	}
 	@Override
 	public String toString() {
-		return "Nombre: "+nombre+" Apellido: "+apellido+" Carrera: "+carrera;
-	}
+
 }
