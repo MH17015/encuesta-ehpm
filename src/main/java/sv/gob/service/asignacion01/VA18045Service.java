@@ -23,16 +23,22 @@ public class VA18045Service implements IVA18045Service {
 		PersonaEjemplo persona2 = new PersonaEjemplo();
 		persona2.setNombre("Daniel");
 		persona2.setApellido("Alegria");
-		persona2.setCarrera("Ing.Sistemas");
+		persona2.setCarrera("Ing.Industrial");
 		
 		PersonaEjemplo persona3 = new PersonaEjemplo();
 		persona3.setNombre("Celia");
 		persona3.setApellido("Bermudez");
-		persona3.setCarrera("Ing.Sistemas");
+		persona3.setCarrera("Ing.Electirca");
+		
+		PersonaEjemplo persona4 = new PersonaEjemplo();
+		persona4.setNombre("Debora");
+		persona4.setApellido("Martinez");
+		persona4.setCarrera("Ing.Mecanica");
 		
 		lista.add(persona1);
 		lista.add(persona2);
 		lista.add(persona3);
+		lista.add(persona4);
 	}
 
 	@Override
