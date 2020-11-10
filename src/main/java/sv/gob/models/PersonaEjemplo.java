@@ -2,6 +2,7 @@ package sv.gob.models;
 
 public class PersonaEjemplo {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private String nombre;
     private String apellido;
@@ -13,6 +14,8 @@ public class PersonaEjemplo {
 
 =======
 >>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
+=======
+>>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
 	private String nombre;
 	private String apellido;
 	private String carrera;
@@ -20,7 +23,10 @@ public class PersonaEjemplo {
 		return nombre;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
 =======
 >>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
 	public void setNombre(String nombre) {
@@ -31,9 +37,13 @@ public class PersonaEjemplo {
 	}
 	public void setApellido(String apellido) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
          this.apellido=apellido;
 
+=======
+		this.apellido = apellido;
+>>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
 =======
 		this.apellido = apellido;
 >>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
@@ -45,6 +55,10 @@ public class PersonaEjemplo {
 		this.carrera = carrera;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	
+>>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
 =======
 	
 >>>>>>> parent of 8df8d02... Merge branch 'develop' into GD13021_asignacion1
