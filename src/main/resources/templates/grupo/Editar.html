@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>  
-  <title>Editar Grupo</title>
+  <title>Registrar Grupo</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,14 +36,14 @@
     	<div class="ruta">
        <a th:href="@{/grupo/administrar}">Grupos</a>
        </div>
-		<div class="ruta2">Editar</div>	
+		<div class="ruta2">Crear</div>	
     </ol>
 
     <!-- Título de la pantalla -->
     <div th:replace="base/general :: titulo_pantalla(
       titulo=~{ :: .titulo}, btnPrincipal=~{ :: .btnPrincipal}, subTit=~{ :: .subTit}
     )">
-      <h2 class="titulo">Editar Grupo</h2>
+      <h2 class="titulo">Registrar Grupo</h2>
       <div class="btnPrincipal"></div>      
       <h5 class="subTit">Coordinación de Levantamiento de Información</h5>
     </div>
@@ -57,21 +57,23 @@
           </div> 
             
           <div class="card-body">
-            <form>
-
+            <form id="formGrupos" th:action="@{/grupo/save}" th:object="${grupos}" method="post">
+               
               <div class="form-row">
 
                 <div class="form-group col-md-6">
                   <label for="codigo">
-                    Código: <span class="text-danger">*</span>
+                    Codigo: <span class="text-danger">*</span>
                   </label>
+                  <input type="hidden" th:field="*{id}">
                   <input
                     type="text"
                     class="form-control"
                     id="codigo"
                     placeholder="Código del grupo"
                     name="codigo"
-                    value="GP0001"
+                    value=""
+                    th:field="*{codigoGrupos}"
                   >
                 </div>
 
@@ -80,7 +82,7 @@
                     Nombre: <span class="text-danger">*</span>
                   </label>
                   <input type="text" class="form-control" placeholder="Nombre del grupo" id="nombre"
-                      name="nombre" value="Grupo 01">
+                      name="nombre" value="" th:field="*{nombreGrupos}">
                 </div>
               </div>
 
@@ -90,10 +92,10 @@
                         <div class="form-group col-md-6">
 
                           <label for="carrera">Zona de operación: <span class="text-danger">*</span></label><br>
-                          <select name="carrera" id="carrera" class="form-control">
+                          <select name="carrera" id="carrera" class="form-control" th:field="*{zonaDeOperacionGrupos}">
 
-                              <option value="" disabled>Seleccione una zona</option>
-                              <option value="Jefedecampo" selected>Oriental</option>
+                              <option value="" disabled selected>Seleccione una zona</option>
+                              <option value="Jefedecampo">Oriental</option>
                               <option value="Encuestador">Occidental</option>
                               <option value="UnidaddeCC">Central I</option>
                               <option value="Coordinador">Central II</option>
@@ -106,9 +108,6 @@
 
           </div>
 
-                </form>
-            
-
             <div class="card-footer text-muted">
 
                 <div class="float-right">
@@ -118,11 +117,12 @@
                     <button type="submit" class="btn btn-dark">Guardar</button>
                 </div>
             </div>
-        </div>
-      </div>
+		  </form>
+        </div>         
+      </div>      
     </div>
   </div>
-
+ 
   <!-- Scripts generales -->
   <div th:replace="base/general :: scripts"></div>
 </body>
