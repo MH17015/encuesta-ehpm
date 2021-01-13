@@ -49,7 +49,11 @@
    
       <h5 class="subTit">Coordinación de Levantamiento de Información</h5>
     </div>
-  
+    <!-- Mensajes -->
+	<div class="alert alert-success alert-dismissable" th:if="${success !=null}">
+		<label th:text="${success}"></label>
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
     <div class="row mb-4">
       <div class="col-md-12">
         <div class="card">
@@ -80,9 +84,9 @@
         
               <tbody>
                 <tr th:each= "lista:${mostrarGrupo}">
-                  <td th:text=${lista.codigo}></td>
-                  <td th:text=${lista.nombre}></td>
-                  <td th:text=${lista.zonaDeOperacion}></td>
+                  <td th:text=${lista.codigoGrupos}></td>
+                  <td th:text=${lista.nombreGrupos}></td>
+                  <td th:text=${lista.zonaDeOperacionGrupos}></td>
                   <td>
                     <a
                       th:href="@{/grupo/miembros/administrar}"
@@ -96,7 +100,7 @@
                   </td>
                   <td>                         
                     <a
-                      th:href="@{/grupo/editar}"
+                      th:href="@{/grupo/editar/{id} (id=${lista.id})}"
                       class="btn btn-outline-dark"
                       role="button"
                       aria-pressed="true"
@@ -104,13 +108,13 @@
                       data-placement="bottom"
                       title="Editar grupo"
                     ><i class="fas fa-edit"></i></a>
-                    <button
-                      type="button"
-                      class="btn btn-outline-dark"
-                      data-toggle="tooltip"
-                      data-placement="bottom"
-                      title="Eliminar grupo"
-                    ><i class="fas fa-trash-alt"></i></button>              
+                    <button class="btn btn-outline-dark"
+                       id="btnEliminar" 
+                       th:attr="onclick=|eliminarGrupos('${lista.id}' )|" 
+                       data-toggle="tooltip" 
+                       data-placement="bottom" 
+                       title="Eliminar miembro"> 
+                       <i class="fas fa-trash-alt"></i></button>           
                   </td>                            
                 </tr>
               </tbody>
@@ -148,5 +152,6 @@
   
   <!-- Scripts generales -->
   <div th:replace="base/general :: scripts"></div>
+   <script th:src="@{/js/grupos/grupos.js}" type="text/javascript"></script> 
 </body>
 </html>
